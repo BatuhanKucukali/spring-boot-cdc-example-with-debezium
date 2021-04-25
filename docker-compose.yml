@@ -36,3 +36,12 @@ services:
       - CONFIG_STORAGE_TOPIC=my_connect_configs
       - OFFSET_STORAGE_TOPIC=my_connect_offsets
       - STATUS_STORAGE_TOPIC=my_connect_statuses
+  mariadb:
+    image: mariadb:10.5.9-focal
+    ports:
+      - 3306:3306
+    environment:
+      - MYSQL_USER=mariadb
+      - MYSQL_PASSWORD=mariadb
+      - MYSQL_ROOT_PASSWORD=mariadb
+      - MYSQL_DATABASE=customer-projection
