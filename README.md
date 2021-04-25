@@ -13,6 +13,21 @@
 
 ## Run this project
 
+Modify the KAFKA_ADVERTISED_HOST_NAME in docker-compose.yml to match your docker host IP (Note: Do not use localhost or
+127.0.0.1 as the host ip if you want to run multiple brokers.)
+
+Set your local ip to env variable.
+
+```shell
+export KAFKA_ADVERTISED_HOST_NAME=$(ifconfig | grep "inet " | grep -Fv 127.0.0.1 | awk '{print $2}')
+```
+
+Check the env variable
+
+```shell
+echo $KAFKA_ADVERTISED_HOST_NAME
+```
+
 1 . Clone project on your machine
 
 ```shell
@@ -92,6 +107,7 @@ customer-projection-consumer database (MariaDB)
 https://github.com/debezium/debezium-examples/tree/master/tutorial
 https://github.com/codefreshdemo/example-springboot-kafka
 https://reflectoring.io/spring-boot-kafka/
+https://github.com/codefreshdemo/example-springboot-kafka
 
 ## Getting help
 
