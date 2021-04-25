@@ -5,6 +5,19 @@ spring:
   application:
     name: customer-projection-consumer
 
+  # Datasource
+  datasource:
+    url: jdbc:mariadb://localhost:3306/customer-projection
+    username: mariadb
+    password: mariadb
+    driver-class-name: org.mariadb.jdbc.Driver
+
+  # Jpa
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+
   # Kafka
   kafka:
     consumer:
@@ -16,8 +29,6 @@ spring:
       properties:
         spring.json.value.default.type: "com.arch.projection.message.DebeziumMessage"
         spring.json.trusted.packages: "com.arch.projection.message"
-
-
 
 # Server
 server:
