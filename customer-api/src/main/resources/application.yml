@@ -1,0 +1,24 @@
+# Spring
+spring:
+
+  # Application
+  application:
+    name: customer-api
+
+  # Database
+  datasource:
+    url: jdbc:postgresql://localhost:5432/user
+    username: postgres
+    password: postgres
+
+  # Jpa
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+
+
+
+# Server
+server:
+  port: 7010
