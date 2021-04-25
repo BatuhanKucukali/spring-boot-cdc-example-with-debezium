@@ -10,7 +10,6 @@ spring:
     url: jdbc:mariadb://localhost:3306/customer-projection
     username: mariadb
     password: mariadb
-    driver-class-name: org.mariadb.jdbc.Driver
 
   # Jpa
   jpa:
