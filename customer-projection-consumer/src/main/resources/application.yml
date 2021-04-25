@@ -1,0 +1,24 @@
+# Spring
+spring:
+
+  # Application
+  application:
+    name: customer-projection-consumer
+
+  # Kafka
+  kafka:
+    consumer:
+      bootstrap-servers: 192.168.1.7:9092
+      group-id: group_id
+      auto-offset-reset: earliest
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.springframework.kafka.support.serializer.JsonDeserializer
+      properties:
+        spring.json.value.default.type: "com.arch.projection.message.DebeziumMessage"
+        spring.json.trusted.packages: "com.arch.projection.message"
+
+
+
+# Server
+server:
+  port: 6010
