@@ -1,0 +1,38 @@
+/// CUSTOMER API ///
+
+// Get Customers
+GET http://localhost:7010
+Content-Type: application/json
+
+###
+
+// Create Customer
+POST http://localhost:7010
+Content-Type: application/json
+
+{
+  "firstName": "Meggie",
+  "lastName": "Mitchell",
+  "email": "meggie-mitchell@mail.test"
+}
+
+###
+
+// Update customer
+PUT http://localhost:7010/1
+Content-Type: application/json
+
+{
+  "firstName": "Dena",
+  "lastName": "Sipes",
+  "email": "dena-sipes@mail.test"
+}
+
+###
+
+// Delete Customer
+DELETE http://localhost:7010/39
+Content-Type: application/json
+
+###
+

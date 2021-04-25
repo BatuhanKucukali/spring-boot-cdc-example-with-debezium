@@ -1,0 +1,30 @@
+/// DEBEZIUM API ///
+
+// Get Connectors
+GET http://localhost:8083/connectors
+
+###
+
+// Create connector
+POST http://localhost:8083/connectors
+Content-Type: application/json
+
+{
+  "name": "customer-connector",
+  "config": {
+    "connector.class": "io.debezium.connector.postgresql.PostgresConnector",
+    "tasks.max": "1",
+    "database.hostname": "postgres",
+    "database.port": "5432",
+    "database.user": "postgres",
+    "database.password": "postgres",
+    "database.dbname": "user",
+    "database.server.name": "master-db"
+  }
+}
+
+###
+
+
+
+
