@@ -76,6 +76,8 @@ curl --location --request POST 'http://localhost:8083/connectors' \
 }'
 ````
 
+You can also check [api-doc](debezium-rest-doc.http)
+
 6. Create User with API
 
 ```bash
@@ -87,6 +89,8 @@ curl --location --request POST 'http://localhost:7010' \
     "email": "john@doe.test"
 }'
 ```
+
+You can also check [api-doc](customer-api-rest-doc.http)
 
 7. Check Database
 
