@@ -1,6 +1,4 @@
-https://github.com/debezium/debezium-examples/tree/master/tutorial
-https://github.com/codefreshdemo/example-springboot-kafka
-https://reflectoring.io/spring-boot-kafka/
+
 
 
 ````postgresql
