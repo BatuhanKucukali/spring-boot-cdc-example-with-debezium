@@ -35,7 +35,7 @@ echo $KAFKA_ADVERTISED_HOST_NAME
 1 . Clone project on your machine
 
 ```shell
-git@github.com:BatuhanKucukali/spring-boot-cdc-example-with-debezium.git
+git clone git@github.com:BatuhanKucukali/spring-boot-cdc-example-with-debezium.git
 ```
 
 2 . Change directory
