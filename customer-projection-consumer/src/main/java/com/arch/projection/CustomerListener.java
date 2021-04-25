@@ -12,7 +12,7 @@ import org.springframework.stereotype.Component;
 @Component
 public class CustomerListener {
 
-    @KafkaListener(topics = "dbserver1.public.customers", groupId = "group_id")
+    @KafkaListener(topics = "master-db.public.customer", groupId = "listener-1")
     void customerListener(@Payload DebeziumMessage<CustomerDto> message,
                           @Header(KafkaHeaders.RECEIVED_PARTITION_ID) int partition,
                           @Header(KafkaHeaders.OFFSET) int offset) {
